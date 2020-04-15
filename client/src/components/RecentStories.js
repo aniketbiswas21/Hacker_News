@@ -3,14 +3,14 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 
-class TopStories extends Component{
+class RecentStories extends Component{
     state={
         posts: [ ]
     }
    async componentDidMount(){
       
-       const res=await axios.get('http://hn.algolia.com/api/v1/search?tags=front_page')
-                             
+       const res=await axios.get('http://hn.algolia.com/api/v1/search_by_date?tags=story')
+                            
             console.log(res);
             this.setState({
                 posts: res.data.hits      
@@ -59,7 +59,7 @@ render(){
     )
     return(
         <div className="container">
-        <h2 className='center'>Top Posts</h2>
+        <h2 className='center'>Latest Posts</h2>
         {postList}
         <div className="fixed-action-btn">
         <Link to='/add' className="btn-floating btn-large red waves-effect hoverable">
@@ -71,4 +71,4 @@ render(){
     )
 }
 }
-export default TopStories;
+export default RecentStories;

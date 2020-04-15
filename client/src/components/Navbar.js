@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
@@ -8,9 +9,9 @@ const Navbar = () => {
         <div class="nav-wrapper #1a237e indigo darken-4">
           <a href="" className="brand-logo" ><span><i className="fab fa-hacker-news-square fa-lg"/>Hacker News</span></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#">Home</a></li>
+            <li><Link to='/'>Home</Link></li>
+            <li><Link to='/top'>Top</Link></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
           </ul>
         </div>
       </nav> 
