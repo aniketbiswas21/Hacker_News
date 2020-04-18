@@ -38,7 +38,7 @@ render(){
         <button className="btn waves-effect waves-light green darken-2" onClick={()=>{window.open(`https://news.ycombinator.com/vote?id=${post.objectID}&how=up&goto=news`)}}><span><i class="fas fa-angle-double-up"></i> Upvote</span></button>
           <span style={{paddingLeft: '15px'}} />
           <button className="btn waves-effect waves-light #6d4c41 brown darken-1" onClick={()=>{this.comment(post.title,post.objectID)}}><span><i class="fas fa-comments"></i> Comments</span></button>
-          <button className="btn waves-effect waves-light #0d47a1 blue darken-4 right" onClick={()=>{window.open(post.url)}}><span><i class="fas fa-book-open fa-xs"></i> Read More</span></button>
+          <a href={post.url?(post.url):(`/null`)}><button className="btn waves-effect waves-light #0d47a1 blue darken-4 right" ><span><i class="fas fa-book-open fa-xs"></i> Read More</span></button></a>
         </div>
       </div>
     </div>
