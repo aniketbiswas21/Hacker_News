@@ -19,6 +19,7 @@ const App = () => {
       <Route exact path='/comments/:title/:id' component={Comments} />
       <Route exact path='/add' component={Add} />
       <Route exact path='/about' component={About} />
+      <Route exact path='/null' component={NotFound} />
       <Route component={NotFound} />
       </Switch>
     </div>
