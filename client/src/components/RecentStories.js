@@ -11,7 +11,7 @@ class RecentStories extends Component{
       
        const res=await axios.get('https://hn.algolia.com/api/v1/search_by_date?tags=story')
                             
-            console.log(res);
+
             this.setState({
                 posts: res.data.hits      
            
@@ -19,7 +19,7 @@ class RecentStories extends Component{
         
     }
     comment = (title, id) =>{
-      window.open(`/comments/${title}/${id}`)
+      this.props.history.push(`/comments/${title}/${id}`)
     }
 
 render(){

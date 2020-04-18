@@ -11,7 +11,7 @@ class TopStories extends Component{
       
        const res=await axios.get('https://hn.algolia.com/api/v1/search?tags=front_page')
                              
-            console.log(res);
+            
             this.setState({
                 posts: res.data.hits      
            
@@ -19,7 +19,7 @@ class TopStories extends Component{
         
     }
 comment = (title, id) =>{
-  window.open(`/comments/${title}/${id}`)
+  this.props.history.push(`/comments/${title}/${id}`)
 }
 
 render(){
