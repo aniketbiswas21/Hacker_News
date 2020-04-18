@@ -65,11 +65,6 @@ render(){
         <div className="container">
         <h2 className='center'>Top Posts</h2>
         {postList}
-        <div className="fixed-action-btn">
-        <Link to='/add' className="btn-floating btn-large red waves-effect hoverable">
-          <i className="large material-icons">add</i>
-        </Link>
-      </div>
             </div>
             
     )

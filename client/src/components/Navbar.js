@@ -11,7 +11,7 @@ const Navbar = () => {
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/top'>Top</Link></li>
-            <li><a href="#">About</a></li>
+            <li><Link to='/about'>About</Link></li>
           </ul>
         </div>
       </nav> 
