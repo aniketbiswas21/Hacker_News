@@ -7,7 +7,7 @@ export default class Comments extends Component {
         comments:[]
     };
     async componentDidMount(){
-        const res=await axios.get(`http://hn.algolia.com/api/v1/search?tags=comment,story_${this.props.match.params.id}`)
+        const res=await axios.get(`https://hn.algolia.com/api/v1/search?tags=comment,story_${this.props.match.params.id}`)
         this.setState({
             comments: res.data.hits
         });

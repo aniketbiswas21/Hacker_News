@@ -9,7 +9,7 @@ class RecentStories extends Component{
     }
    async componentDidMount(){
       
-       const res=await axios.get('http://hn.algolia.com/api/v1/search_by_date?tags=story')
+       const res=await axios.get('https://hn.algolia.com/api/v1/search_by_date?tags=story')
                             
             console.log(res);
             this.setState({
